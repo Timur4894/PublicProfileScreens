@@ -46,7 +46,7 @@ function PublicProfileScreen(){
                     </Text>
                 </View>
 
-                <ScrollView horizontal>
+                <ScrollView horizontal style={styles.rewardCardsContainer}>
                     <RewardItem/>
                     <RewardItem/>
                     <RewardItem/>
@@ -84,12 +84,16 @@ const styles = StyleSheet.create({
     },
     allRewards: {
         marginTop: 40,
+        width: containerWidth,
     },
     rewardsTopText:{
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: containerWidth,
         marginBottom: 16
+    },
+    rewardCardsContainer: {
+        marginBottom: 24
     }
 });
 
