@@ -43,35 +43,35 @@ const ProfileScreen = () => {
 }
 
 export default function App() {
-  return (
-    <FontLoader>
-      <NavigationContainer>
-        <StatusBar style='light'/>
-        <Tab.Navigator>
-          <Tab.Screen name="Riddles" component={ProfileScreen} options={{ 
-              headerShown: false ,
-              tabBarActiveTintColor: 'black',
-              tabBarIcon: () => (
-                <Riddles/>
-              )
-            }}/>
-          <Tab.Screen name="Leaders" component={ProfileScreen} options={{ 
-              headerShown: false ,
-              tabBarActiveTintColor: 'black',
-              tabBarIcon: () => (
-                <Leaders/>
-              )
-            }}/>
-          <Tab.Screen name="Profile" component={ProfileScreen} options={{ 
-              headerShown: false ,
-              tabBarActiveTintColor: 'black',
-              tabBarIcon: () => (
-                <Profile/>
-              )
-            }}/>
-        </Tab.Navigator>
-      </NavigationContainer>
-    </FontLoader>
+  return (    
+      <FontLoader>
+        <NavigationContainer>
+          <StatusBar style='light'/>
+          <Tab.Navigator>
+            <Tab.Screen name="Riddles" component={ProfileScreen} options={{ 
+                headerShown: false ,
+                tabBarActiveTintColor: 'black',
+                tabBarIcon: () => (
+                  <Riddles/>
+                )
+              }}/>
+            <Tab.Screen name="Leaders" component={ProfileScreen} options={{ 
+                headerShown: false ,
+                tabBarActiveTintColor: 'black',
+                tabBarIcon: () => (
+                  <Leaders/>
+                )
+              }}/>
+            <Tab.Screen name="Profile" component={ProfileScreen} options={{ 
+                headerShown: false ,
+                tabBarActiveTintColor: 'black',
+                tabBarIcon: () => (
+                  <Profile/>
+                )
+              }}/>
+          </Tab.Navigator>
+        </NavigationContainer>
+      </FontLoader>
   );
 }
 
