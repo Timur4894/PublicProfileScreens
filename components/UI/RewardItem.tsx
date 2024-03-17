@@ -1,38 +1,17 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import Nike from "../svg/Nike";
-import Airbnb from "../svg/Airbnb";
-import Netflix from "../svg/Netflix";
+import Nike from "../../assets/svg/Nike";
+import Airbnb from "../../assets/svg/Airbnb";
+import Netflix from "../../assets/svg/Netflix";
+import { COLORS } from "../../constants/Colors";
 
-const lightenColor = (color, percent) => {
-  const num = parseInt(color.replace("#", ""), 16);
-  const amt = Math.round(1.50 * percent);
-  const R = (num >> 16) + amt;
-  const G = ((num >> 8) & 0x00ff) + amt;
-  const B = (num & 0x0000ff) + amt;
-
-  return (
-    "#" +
-    (
-      0x1000000 +
-      (R < 255 ? (R < 1 ? 0 : R) : 255) * 0x10000 +
-      (G < 255 ? (G < 1 ? 0 : G) : 255) * 0x100 +
-      (B < 255 ? (B < 1 ? 0 : B) : 255)
-    )
-      .toString(16)
-      .slice(1)
-  );
-};
-
-const RewardItem = ({
-  text,
-  logo,
-  backgroundColor,
-}: {
+interface RewardItemProps {
   text: string;
   logo: string;
   backgroundColor: string;
-}) => {
+}
+
+const RewardItem = ({text,logo,backgroundColor,} : RewardItemProps) => {
   let logoComponent;
   switch (logo) {
     case "Nike":
@@ -49,15 +28,14 @@ const RewardItem = ({
       break;
   }
 
-  const logoBackgroundColor = lightenColor(backgroundColor, 20);
-
   return (
     <View style={[styles.container, { backgroundColor, borderColor: backgroundColor, }]}>
-      <View style={[styles.logoContainer, { backgroundColor: logoBackgroundColor }]}>
+      <View style={styles.logoContainer}>
         {logoComponent}
       </View>
-
-      <Text style={styles.text}>{text}</Text>
+      <Text style={styles.text}>
+        {text}
+      </Text>
     </View>
   );
 };
@@ -76,15 +54,14 @@ const styles = StyleSheet.create({
   },
   text: {
     fontWeight: "bold",
-    // marginBottom: 8,
     textAlign: "center",
     fontSize: 11,
     marginTop: 16,
-    color: "#fff",
+    color: COLORS.white,
     fontFamily: 'Nunito_700Bold',
-    textShadowOffset: { width: 0, height: 1.5 }, // горизонтальное смещение 0, вертикальное смещение 2 (тень будет внизу)
-    textShadowRadius: 1, // радиус тени
-    textShadowColor: 'rgba(0, 0, 0, 0.5)', // цвет тени
+    textShadowOffset: { width: 0, height: 1.5 },
+    textShadowRadius: 1,
+    textShadowColor: 'rgba(0, 0, 0, 0.5)',
   },
   logoContainer: {
     borderRadius: 16,
