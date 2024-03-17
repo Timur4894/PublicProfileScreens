@@ -79,10 +79,10 @@ interface Card {
                     <View style={styles.profileInfo}>
                         <View style={styles.imageShadow}>
                             <View style={styles.circleContainer}> 
-                                <Image
-                                 source={require('../assets/img/face.png')} //userData.photoPath
+                            <Image
+                                source={{ uri: userData.photoPath }}
                                 style={styles.imageStyle} 
-                                />
+                            />
                             </View>
                         </View>
                         <Text style={styles.personName}>

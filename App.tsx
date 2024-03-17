@@ -23,16 +23,14 @@ const ProfileScreen = () => {
         component={PublicProfileScreen}
         options={({ navigation }) => ({
           headerRight: () => (
-            <View style={styles.TopRightButtonsMargin}>
+            <Pressable onPress={()=>{}} style={styles.TopRightButtonsMargin}>
               <InformationIcon/>
-            </View>
+            </Pressable>
           ),
           headerLeft: () => (
-            <View style={styles.TopLeftButtonsMargin}>
-              <Pressable onPress={() => {}}>  
-                <Arrow/>
-              </Pressable>  
-            </View>   
+            <Pressable onPress={() =>{}} style={styles.TopLeftButtonsMargin}>  
+              <Arrow/>
+            </Pressable>  
           ),
           headerTitle: 'Profile',
           headerTitleStyle: styles.headerTitleStyle,
@@ -47,7 +45,7 @@ export default function App() {
   return (    
       <FontLoader>
         <NavigationContainer>
-          <StatusBar style='light'/>
+          <StatusBar style='dark'/>
           <Tab.Navigator screenOptions={{
             headerShown: false,
             tabBarActiveTintColor: 'black',

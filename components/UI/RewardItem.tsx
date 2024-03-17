@@ -21,7 +21,7 @@ const RewardItem = ({text,logo,backgroundColor,} : RewardItemProps) => {
       logoComponent = <Airbnb />;
       break;
     case "Netflix":
-      logoComponent = <Netflix />;
+      logoComponent = <Airbnb />;
       break;
     default:
       logoComponent = null;
