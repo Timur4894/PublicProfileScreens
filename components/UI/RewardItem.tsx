@@ -1,8 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import Nike from "../../assets/svg/Nike";
-import Airbnb from "../../assets/svg/Airbnb";
-import Netflix from "../../assets/svg/Netflix";
+import Nike from "../../assets/svg/companyLogos/Nike";
+import Airbnb from "../../assets/svg/companyLogos/Airbnb";
 import { COLORS } from "../../constants/Colors";
 
 interface RewardItemProps {
@@ -11,7 +10,7 @@ interface RewardItemProps {
   backgroundColor: string;
 }
 
-const RewardItem = ({text,logo,backgroundColor,} : RewardItemProps) => {
+const RewardItem = ({ text, logo, backgroundColor }: RewardItemProps) => {
   let logoComponent;
   switch (logo) {
     case "Nike":
@@ -29,13 +28,14 @@ const RewardItem = ({text,logo,backgroundColor,} : RewardItemProps) => {
   }
 
   return (
-    <View style={[styles.container, { backgroundColor, borderColor: backgroundColor, }]}>
-      <View style={styles.logoContainer}>
-        {logoComponent}
-      </View>
-      <Text style={styles.text}>
-        {text}
-      </Text>
+    <View
+      style={[
+        styles.container,
+        { backgroundColor, borderColor: backgroundColor },
+      ]}
+    >
+      <View style={styles.logoContainer}>{logoComponent}</View>
+      <Text style={styles.text}>{text}</Text>
     </View>
   );
 };
@@ -58,10 +58,10 @@ const styles = StyleSheet.create({
     fontSize: 11,
     marginTop: 16,
     color: COLORS.white,
-    fontFamily: 'Nunito_700Bold',
+    fontFamily: "Nunito_700Bold",
     textShadowOffset: { width: 0, height: 1.5 },
     textShadowRadius: 1,
-    textShadowColor: 'rgba(0, 0, 0, 0.5)',
+    textShadowColor: "rgba(0, 0, 0, 0.5)",
   },
   logoContainer: {
     borderRadius: 16,

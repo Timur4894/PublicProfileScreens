@@ -5,21 +5,22 @@
   "continentRank": 45,
   "points": 1000,
   "solvedRiddles": 8476638,
-  "cards": {
-    "firstCard": {
-      "text": "10% discount on Nike!",
-      "logo": "Nike",
-      "backgroundColor": "#58ACF5"
-    },
-    "secondCard": {
-      "text": "25% discount on AirBnB! ",
-      "logo": "AirBnB",
-      "backgroundColor": "#FF5A5F"
-    },
-    "thirdCard": {
-      "text": "Netflix 1 free month ",
-      "logo": "Netflix",
-      "backgroundColor": "#101010"
-    }
+  "rewards": {
+    // "firstCard": {
+    //   "text": "10% discount on Nike!",
+    //   "logo": "Nike",
+    //   "backgroundColor": "#58ACF5"
+    // },
+    // "secondCard": {
+    //   "text": "25% discount on AirBnB! ",
+    //   "logo": "AirBnB",
+    //   "backgroundColor": "#FF5A5F"
+    // },
+    // "thirdCard": {
+    //   "text": "Netflix 1 free month ",
+    //   "logo": "Netflix",
+    //   "backgroundColor": "#101010"
+    // }
   }
 }
+
