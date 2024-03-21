@@ -19,6 +19,7 @@ import { UserData } from "../constants/type";
 
 function PublicProfileScreen() {
   const [userData, setUserData] = useState<UserData | null>(null);
+  const isAvailable = userData && userData.rewards && Object.keys(userData.rewards).length > 0;
 
   const fetchData = async () => {
     try {
@@ -93,7 +94,7 @@ function PublicProfileScreen() {
           <View style={styles.allRewards}>
             <View style={styles.rewardsTopText}>
               <Text style={styles.rewardsText}>Rewards</Text>
-              {userData.rewards && Object.keys(userData.rewards).length > 0 ? (
+              {isAvailable ? (
                 <Pressable onPress={() => {}}>
                   <Text style={styles.seeAllText}>See all</Text>
                 </Pressable>
@@ -101,7 +102,7 @@ function PublicProfileScreen() {
                 <></>
               )}
             </View>
-            {userData.rewards && Object.keys(userData.rewards).length > 0 ? (
+            {isAvailable ? (
               <ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}
